@@ -21,8 +21,6 @@ class CSVTimeSeriesFile:
                 if timestamp < 0:
                     raise ExamException("il numero non è valido")
                 temperature = float(unita[1]) #converto in float e salvo in temperature
-                if temperature < 0 or temperature > 40:
-                    raise ExamException("temperatura insolide")
                 time_series.append([timestamp, temperature])
                 #salvo tutto in un vettore
         else:
